@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silent Auth - qlik-embed</title>
+
+    <style>
+        #classic-app {
+            height: 800px;
+            width: 1200px;
+            border: 1px solid #bbb;
+            flex-grow: 1;
+            border-radius: 3px;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            box-sizing: border-box;
+            overflow: auto;
+            position: relative;
+        }
+    </style>
+
+    <script crossorigin="anonymous" type="application/javascript"
+        src="https://cdn.jsdelivr.net/npm/@qlik/embed-web-components@1.1.2/dist/index.js" data-auth-type="Oauth2"
+        data-host="https://{QLIK_CLOUD_URI_HERE}.us.qlikcloud.com" data-client-id="{OAUTH_CLIENT_ID_HERE}"
+        data-redirect-uri="https://localhost:3000/oauth-callback.html" data-access-token-storage="session"
+        data-auto-redirect="true"></script>
+
+</head>
+
+<body>
+    <div id="classic-app">
+        <h1>qlik-embed classic/app embeds the full Qlik Sense client in the page.</h1>
+        <div class="classic-app">
+            <qlik-embed ui="classic/app" app-id="d05d38f2-5106-413d-8dbb-2e50cf7f91be"></qlik-embed>
+        </div>
+    </div>
+</body>
+
+</html>
